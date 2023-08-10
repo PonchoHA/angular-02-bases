@@ -1,0 +1,16 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.css']
+})
+export class ListComponent {
+
+  public heros: string[] = ['Spiderman','Batman','Cap','Rocket'];
+  public heroDeleted?:string;
+
+  removeLastHero() {
+    this.heroDeleted = this.heros.pop();
+  }
+}
